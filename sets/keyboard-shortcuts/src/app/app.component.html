@@ -1,0 +1,28 @@
+<nav>
+    <button md-button
+            routerLink="/about"
+            routerLinkActive="active">
+        About
+    </button>
+    <button md-button
+            routerLink="/dashboard"
+            routerLinkActive="active">
+        Dashboard
+    </button>
+    <button md-button
+            routerLink="/home"
+            routerLinkActive="active">
+        Home
+    </button>
+    <button md-button
+            routerLink="/profile"
+            routerLinkActive="active">
+        Profile
+    </button>
+</nav>
+
+<router-outlet></router-outlet>
+
+<section [class]="keypress? 'bottom-right': ''">
+    {{keypress}}
+</section>
