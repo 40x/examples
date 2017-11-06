@@ -10,7 +10,7 @@ export class TrackerService {
     }
 
     setupTracker () {
-        this.worker = new Worker('src/app/utils/tracker.js');
+        this.worker = new Worker('scripts.bundle.js');
     }
 
     addEvent(key: string, event: any, customValue ?: string) {

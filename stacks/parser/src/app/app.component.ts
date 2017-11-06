@@ -22,7 +22,7 @@ export class AppComponent {
     }
 
     private setUpParser() {
-        this.worker = new Worker('src/app/utils/worker.js');
+        this.worker = new Worker('scripts.bundle.js');
 
         this.worker.addEventListener('message', (e) => {
             this.result = e.data;

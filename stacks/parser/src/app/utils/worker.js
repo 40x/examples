@@ -4,7 +4,7 @@ function init() {
 	self.addEventListener('message', function(e) {
 		var code = e.data;
 
-		if(code.match(/.*[a-zA-Z]+.*/g)) {
+		if(typeof code !== 'string' || code.match(/.*[a-zA-Z]+.*/g)) {
 			respond('Error! Cannot evaluate complex expressions yet. Please try again later');
 		} else {
 			respond(evaluate(convert(code)));
@@ -44,6 +44,19 @@ function evaluate(postfix) {
 	}
 }
 
+function isBalanced(postfix) {
+	var count = 0;
+	postfix.forEach(function(op) {
+		if (op === ')') {
+			count++
+		} else if (op === '(') {
+			count --
+		}
+	});
+
+	return count === 0;
+}
+
 function getParseMethod(num) {
 	return num % 1 === 0 ? parseInt : parseFloat;
 }
@@ -75,6 +88,11 @@ function convert(expr) {
 	};
 
 	expr = clean(expr.trim().replace(/\s+/g, "").split(/([\+\-\*\/\^\(\)])/));
+
+
+	if (!isBalanced(expr)) {
+		return 'error';
+	}
 
 	expr.forEach(function(exp) {
 		if(!isNaN(parseFloat(exp))) {

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MdInputModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -21,7 +21,7 @@ import {TrackerService} from "./service/tracker/tracker.service";
         HttpModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
-        MdInputModule
+        MatInputModule
     ],
     providers: [
         TrackerService

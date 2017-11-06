@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {routes, navigatableComponents} from "./app.routing";
 import {RouterModule} from "@angular/router";
-import {MdButtonModule} from "@angular/material";
+import {MatButtonModule} from "@angular/material";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -23,7 +23,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
         // material
 
-        MdButtonModule
+        MatButtonModule
     ],
     providers: [],
     bootstrap: [AppComponent]
