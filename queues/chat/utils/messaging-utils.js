@@ -1,4 +1,3 @@
-var Queue = require('./queue');
 var PriorityQueue = require('./priority-queue');
 
 var Utils = (()=> {
@@ -12,7 +11,6 @@ var Utils = (()=> {
 
 			// use from and to here to determine if a failure queue already
 			// exists or create a new one
-			// return new Queue();
 
 			return new PriorityQueue();
 		}
