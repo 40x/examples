@@ -23,7 +23,7 @@ class Graph {
 		// final shortestPath
 		var shortestPath;
 
-		// for iterationing along the breadth
+		// for iterating along the breadth
 		var tail = 0;
 
 		// queue of users being visited
