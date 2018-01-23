@@ -67,7 +67,7 @@ class BFS {
 					// set the visited flag
 					visitedNodes[name] = true;
 
-					// push to nodes to visi
+					// push to nodes to visit
 					nodesToVisit.push(name);
 				}
 			});
