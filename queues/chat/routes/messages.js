@@ -22,7 +22,7 @@ router.route('/')
 				console.log('send success');
 
 				// success
-				res.send('OK!');
+				res.send(`Message received from: ${req.body.from} to ${req.body.to} with message ${req.body.message}`);
 
 			}, function() {
 
